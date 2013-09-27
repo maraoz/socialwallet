@@ -9,6 +9,8 @@ import flask
 from flaskext import login
 from flaskext import oauth
 
+from blockchain import new_address
+
 import util
 import model
 import config
@@ -320,6 +322,7 @@ def create_user_db(name, username, email='', **params):
       username=new_username,
       **params
     )
+  user_db.address = new_address()
   user_db.put()
   return user_db
 

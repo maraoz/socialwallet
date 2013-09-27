@@ -88,7 +88,6 @@ class FeedbackForm(wtf.Form):
       wtf.validators.email('That does not look like an email'),
     ])
 
-
 @app.route('/feedback/', methods=['GET', 'POST'])
 def feedback():
   if not config.CONFIG_DB.feedback_email:
@@ -124,7 +123,6 @@ def feedback():
 ################################################################################
 @app.route('/_s/user/', endpoint='user_list_service')
 @app.route('/user/', endpoint='user_list')
-@auth.admin_required
 def user_list():
   user_dbs, more_cursor = util.retrieve_dbs(
       model.User.query(),

@@ -7401,6 +7401,9 @@ body {
   margin: auto;
   display: block;
 }
+.logo {
+  background-image: url("../../img/bitcoin.png");
+}
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;

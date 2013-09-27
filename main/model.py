@@ -62,9 +62,12 @@ class User(Base, modelx.UserX):
   federated_id = ndb.StringProperty(indexed=True, default='')
   facebook_id = ndb.StringProperty(indexed=True, default='')
   twitter_id = ndb.StringProperty(indexed=True, default='')
+  
+  address = ndb.StringProperty(indexed=True, default='')
 
   _PROPERTIES = Base._PROPERTIES.union(set([
       'name',
+      'address'
       'username',
       'avatar_url',
     ]))
