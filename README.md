@@ -1,0 +1,4 @@
+socialwallet
+============
+
+Bitcoin Social Wallet
